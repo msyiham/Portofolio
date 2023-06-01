@@ -1,0 +1,102 @@
+.card-container {
+  margin-top: 40px; /* Added px unit to the margin-top */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.card-contact {
+  margin-top: 40px; /* Added px unit to the margin-top */
+  display: flex;
+  align-items: left;
+  text-align: left;
+}
+.contact-list {
+  list-style-type: none;
+  padding: 0;
+}
+.card {
+  background: radial-gradient(circle at 50% -20.71%, #ffe6cd 0, #ffe7ca 6.25%, #ffe9c9 12.5%, #ffebc8 18.75%, #fbecc8 25%, #f6eec8 31.25%, #f1efc9 37.5%, #ebf1cb 43.75%, #e6f2cd 50%, #e1f3d0 56.25%, #dbf4d3 62.5%, #d6f5d7 68.75%, #d1f6db 75%, #ccf7df 81.25%, #c8f8e4 87.5%, #c4f8e9 93.75%, #c1f8ee 100%);
+  padding: 20px;
+  width: 500px;
+  margin: 0 auto; /* Center the card horizontally */
+}
+
+.profile-picture {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  display: block; /* Add this to center the image within the card */
+  margin-left: auto; /* Add this to center the image horizontally */
+  margin-right: auto; /* Add this to center the image horizontally */
+}
+figure {
+  display: grid;
+  border-radius: 1rem;
+  overflow: hidden;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+figure > * {
+  grid-area: 1/1;
+  transition: .4s;
+}
+
+figure img {
+  width: 100%;
+  height: 300px;
+}
+
+figure figcaption {
+  display: grid;
+  align-items: end;
+  font-family: sans-serif;
+  font-size: 2.3rem;
+  font-weight: bold;
+  color: #0000;
+  padding: .75rem;
+  background: var(--c, #0009);
+  clip-path: inset(0 var(--_i, 100%) 0 0);
+  -webkit-mask:
+    linear-gradient(#000 0 0),
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  -webkit-mask-clip: text, padding-box;
+}
+
+figure:hover figcaption {
+  --_i: 0%;
+}
+
+figure:hover img {
+  transform: scale(1.2);
+}
+
+@supports not (-webkit-mask-clip: text) {
+  figure figcaption {
+    -webkit-mask: none;
+    color: #fff;
+  }
+}
+
+.wadah {
+  margin: 0;
+  display: grid;
+  grid-auto-flow: column;
+  place-content: center;
+}
+
+@media (max-width: 767px) {
+  .wadah {
+    grid-auto-flow: row;
+  }
+}
+
+@media (min-width: 768px) {
+  .wadah {
+    gap: 1rem;
+  }
+}
